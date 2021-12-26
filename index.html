@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joker | Landing Page UI Design</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="logo.png" /></a>
+      <div class="toggle"><img src="toggle.png"></div>
+    </header>
+
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy</span> face</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum in laudantium dolorum tempore numquam itaque, dolore illo ipsum eveniet.</p>
+            <a href="#" class="play" onclick="toggle();"><img src="play.png">Watch Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="facebook.png"></a></li>
+                <li><a href="#"><img src="twitter.png"></a></li>
+                <li><a href="#"><img src="instagram.png"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="trailer">
+        <video src="vid-3.mp4" controls="true"></video>
+        <img src="close.png" class="close" onclick="toggle();">
+    </div>
+
+
+    <script>
+        function toggle(){
+            let trailer = document.querySelector('.trailer');
+            let video = document.querySelector('video');
+            trailer.classList.toggle("active");
+
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+  </body>
+</html>
